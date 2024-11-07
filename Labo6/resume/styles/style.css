@@ -1,0 +1,36 @@
+/*elementen*/
+body{
+    font-family: 'Helvetica', sans-serif;
+}
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 40px;
+}
+a{
+    color: #EF233C;
+}
+/*header en footer */
+header{
+    margin-bottom: 10px;
+}
+footer{
+    margin-top: 10px;
+}
+header>h1,header>h2{
+    color: #EDF2F4;
+}
+header,.education,footer{
+    padding: 30px;
+}
+header,footer{
+    background-color: #2B2D42;
+    color: #8D99AE;
+}
+/*alles onder klasse education*/
+.education{
+    background-color: #8D99AE;
+}
+
+

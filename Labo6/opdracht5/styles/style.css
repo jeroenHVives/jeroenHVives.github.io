@@ -1,0 +1,9 @@
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/icon.png');
+    background-size: cover;
+    margin-right: 4px;
+}
+
