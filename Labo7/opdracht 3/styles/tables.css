@@ -1,0 +1,33 @@
+.datagrid{
+    border-collapse: collapse;
+    text-align: left;
+}
+.datagrid td, .datagrid th { padding: 5px; }
+.datagrid thead th {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#92BFF6', endColorstr='#92BFF6');
+    background-color:#92BFF6;
+    color:#000000;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 2px solid #4E9BFA;
+}
+.datagrid thead th:first-child {
+    border: none;
+}
+.datagrid tbody td {
+    color: #000000;
+    border-left: 2px solid #92BFF6;
+    font-size: 11px;
+    border-bottom: 2px solid #92BFF6;
+    font-weight: normal;
+}
+.datagrid tbody .alt td {
+    background: #E7EFF8;
+    color: #000000;
+}
+.datagrid tbody td:first-child { border-left: none; }
+.datagrid tbody tr:last-child td { border-bottom: none; }
+
+.onbekend {
+    background-color: red !important;
+}

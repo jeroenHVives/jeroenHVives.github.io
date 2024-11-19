@@ -1,0 +1,34 @@
+table{
+    border: 2px solid #000;
+    border-top: none;
+    border-collapse: collapse;
+}
+caption{
+    border: 2px solid #000;
+    border-bottom: none;
+    background-color: rgb(170, 170,200);
+    font-weight: bold;
+}
+td{
+    border: 1px dotted #000;
+    border-top: none;
+}
+
+th{
+    border: 1px dotted rgb(200,190,240);
+    color: rgb(200,190,240);
+    background-color: rgb(35,37,70);
+}
+
+td:first-child, td:last-child{
+    background-color: rgb(255,220 ,220);
+}
+
+.vrije_dag{
+    background-color: rgb(250,120,120);
+}
+
+.andere_maand{
+    background-color: darkgrey !important;
+    color: gray !important;
+}
