@@ -4,12 +4,14 @@ const setup = () => {
 }
 
 const validatie = () => {
+    let AllesKlopt = true;
     let txtVnaam = document.getElementById("txtVnaam");
     let value_txtVnaam = txtVnaam.value.trim();
     if( value_txtVnaam.length > 30) {
         let errVnaam = document.getElementById("errVnaam");
         errVnaam.innerHTML = "Max. 30 karakters"
         txtVnaam.classList.add("invalid");
+        AllesKlopt = false;
     }
     else{
         let errVnaam = document.getElementById("errVnaam");
@@ -23,11 +25,13 @@ const validatie = () => {
         let errFnaam = document.getElementById("errFnaam");
         errFnaam.innerHTML = "verplicht veld"
         txtFnaam.classList.add("invalid");
+        AllesKlopt = false;
     }
     else if(value_txtFnaam.length > 50) {
         let errFnaam = document.getElementById("errFnaam");
         errFnaam.innerHTML = "Max. 50 karakters"
         txtFnaam.classList.add("invalid");
+        AllesKlopt = false;
     }
     else{
         let errFnaam = document.getElementById("errFnaam");
@@ -41,11 +45,13 @@ const validatie = () => {
         let errBirth = document.getElementById("errBirth");
         errBirth.innerHTML = "verplicht veld"
         txtBirth.classList.add("invalid");
+        AllesKlopt = false;
     }
     else if(!validatorBirthdate(value_txtBirth)) {
         let errBirth = document.getElementById("errBirth");
         errBirth.innerHTML = "Formaat is niet jjjj-mm-dd"
         txtBirth.classList.add("invalid");
+        AllesKlopt = false;
 
     }
     else{
@@ -60,11 +66,13 @@ const validatie = () => {
         let errMail = document.getElementById("errMail");
         errMail.innerHTML = "Verplicht veld"
         txtmail.classList.add("invalid");
+        AllesKlopt = false;
     }
     else if(!value_mail.includes("@") || value_mail.indexOf("@") === 0 || value_mail.indexOf("@") === value_mail.length-1) {
         let errMail = document.getElementById("errMail");
         errMail.innerHTML = "Geen geldig email adres"
         txtmail.classList.add("invalid");
+        AllesKlopt = false;
     }
     else{
         let errMail = document.getElementById("errMail");
@@ -78,16 +86,22 @@ const validatie = () => {
         let errKinderen = document.getElementById("errKinderen");
         errKinderen.innerHTML = "is geen positief getal"
         txtKinderen.classList.add("invalid");
+        AllesKlopt = false;
     }
     else if(parseInt(value_txtKinderen) > 99){
         let errKinderen = document.getElementById("errKinderen");
         errKinderen.innerHTML = "is te vruchtbaar"
         txtKinderen.classList.add("invalid");
+        AllesKlopt = false;
     }
     else{
         let errKinderen = document.getElementById("errKinderen");
         errKinderen.innerHTML = ""
         txtKinderen.classList.remove("invalid");
+    }
+
+    if(AllesKlopt){
+        window.alert("Proficiat!")
     }
 }
 
