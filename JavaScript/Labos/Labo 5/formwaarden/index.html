@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    <table>
+        <tr>
+            <td><label for="roker">Is roker</label></td>
+            <td><input type="checkbox" name="roker" id="roker"></td>
+        </tr>
+        <tr>
+            <td>moedertaal</td>
+            <td>
+                <input type="radio" name="moedertaal" id="nederlands">
+                <label for="nederlands">Nederlands</label>
+                <input type="radio" name="moedertaal" id="frans">
+                <label for="frans">Frans</label>
+                <input type="radio" name="moedertaal" id="engels">
+                <label for="engels">Engels</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="buurland">Favoriete buurland</label></td>
+            <td>
+                <select name="buurland" id="buurland">
+                    <option value="frankrijk">Frankrijk</option>
+                    <option value="England">Frankrijk</option>
+                    <option value="Duitsland">Frankrijk</option>
+                    <option value="Nederland">Frankrijk</option>
+                    <option value="Luxemburg">Frankrijk</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="bestelling">bestelling</label></td>
+            <td>
+                <select name="bestelling" id="bestelling" multiple>
+                    <option value="aardappelen">aardappelen</option>
+                    <option value="brood">brood</option>
+                    <option value="melk">melk</option>
+                    <option value="biefstuk">biefstuk</option>
+                    <option value="chips">chips</option>
+                    <option value="krant">krant</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" id="btn_resultaat" value="Toon Resultaat"></td>
+        </tr>
+
+    </table>
+
+
+    <br>
+</form>
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+</body>
+</html>
