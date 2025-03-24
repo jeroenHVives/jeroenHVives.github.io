@@ -1,0 +1,30 @@
+#zin {
+    position: fixed;
+    left: 35%;
+    top: 30%;
+    font-size: 4em;
+}
+
+#yes {
+    position: fixed;
+    left: 37%;
+    top: 50%;
+    width: 10%;
+    height: 5%;
+    font-size: 2em;
+    background-color: lightgreen;
+    color: darkgreen;
+    border-color: darkgreen;
+}
+
+#no {
+    position: fixed;
+    left: 52%;
+    top: 50%;
+    width: 10%;
+    height: 5%;
+    font-size: 2em;
+    background-color: red;
+    color: darkred;
+    border-color: darkred;
+}
