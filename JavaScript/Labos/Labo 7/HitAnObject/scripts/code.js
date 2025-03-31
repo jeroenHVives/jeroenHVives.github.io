@@ -1,6 +1,12 @@
-let timerId = 0;
-let gameStarted = false;
-
+let global = {
+    IMAGE_COUNT: 5, // aantal figuren
+    IMAGE_SIZE: 48, // grootte van de figuur
+    IMAGE_PATH_PREFIX: "images/", // map van de figuren
+    IMAGE_PATH_SUFFIX: ".png", // extensie van de figuren
+    MOVE_DELAY: 3000, // aantal milliseconden voor een nieuwe afbeelding verschijnt
+    score: 0, // aantal hits
+    timeoutId: 0 // id van de timeout timer, zodat we die kunnen annuleren
+};
 
 const setup = () => {
     window.addEventListener("resize", updateSize);
@@ -22,9 +28,10 @@ const setup = () => {
 
     //target element aanmaken
     let target = document.createElement("img");
-    target.src = "images/4.png"
+    target.src = global.IMAGE_PATH_PREFIX + "4" + global.IMAGE_PATH_SUFFIX;
     target.alt = "bomb"
     target.id = "target"
+    target.style.width = global.IMAGE_SIZE + "px";
 
     //elementen toevoegen aan het speelveld
     let playField = document.getElementById("playField");
@@ -45,11 +52,11 @@ const randomObject = () => {
     //om het vorige target object te verwijderen
     document.getElementById("target").remove();
     //om een random getal van 1 tot 5 te krijgen
-    let randomInt = Math.floor(Math.random() * 5);
+    let randomInt = Math.floor(Math.random() * global.IMAGE_COUNT);
     //om het target object aan te maken
     let playField = document.getElementById("playField");
     let imgObject = document.createElement("img");
-    imgObject.src = "images/" + randomInt + ".png";
+    imgObject.src = global.IMAGE_PATH_PREFIX + randomInt + global.IMAGE_PATH_SUFFIX;
     imgObject.alt = "voedsel of bom";
     imgObject.id = "target";
     imgObject.style.left = Math.floor(Math.random() * (playField.clientWidth - imgObject.width)) + "px";
@@ -63,18 +70,19 @@ const randomObject = () => {
     }
     playField.appendChild(imgObject);
     console.log("gelukt")
-    timerId = setTimeout(randomObject, 1000);
+    global.timeoutId = setTimeout(randomObject, global.MOVE_DELAY);
 }
 
 const hit = () => {
     let txtHits = document.getElementById("txtHits");
-    txtHits.innerHTML = (parseInt(txtHits.innerHTML, 10) + 1);
-    clearTimeout(timerId);
+    global.score++;
+    txtHits.innerHTML = global.score;
+    clearTimeout(global.timeoutId);
     randomObject();
 }
 
 const gameOver = () => {
-    clearTimeout(timerId);
+    clearTimeout(global.timeoutId);
     console.log("game over")
     window.alert("Game Over!");
 }
