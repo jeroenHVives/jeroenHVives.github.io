@@ -1,0 +1,24 @@
+div, th, td, tr{
+    width: 300px;
+}
+
+thead{
+    background: #112b41;
+    color: white;
+}
+
+.table {
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background: lightgray;
+}
+
+#tables{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin: 10px;
+}
