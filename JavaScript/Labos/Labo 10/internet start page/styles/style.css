@@ -1,0 +1,37 @@
+.bg-twitter{
+    background-color: deepskyblue;
+    color: white;
+}
+.bg-youtube{
+    background-color: red;
+    color: white;
+}
+
+.bg-youtube a,.bg-twitter a{
+    background-color: black;
+    color: white;
+}
+
+.bg-google{
+    background-color: blue;
+    color: white;
+}
+
+.bg-google a{
+    background-color: orangered;
+    color: rgba(255, 136, 83, 0.75)
+}
+
+.bg-instagram{
+    background-color: purple;
+    color: white;
+}
+
+.bg-instagram a{
+    background-color: orange;
+    color: #ffd57c;
+}
+
+
+
+
