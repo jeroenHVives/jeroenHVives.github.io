@@ -1,0 +1,15 @@
+img{
+    display: block;
+    width: 20vw;
+    margin: auto;
+}
+
+.container{
+    width: 50vw;
+    margin: auto;
+}
+
+.container *{
+    text-align: center;
+}
+
